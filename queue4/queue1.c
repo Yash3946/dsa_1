@@ -71,11 +71,11 @@ int main()
                 scanf("%d", &num);
                 enQueue(num);
                 break;     ///
-                
+
         
             case 2:
                 display();      //
-                break;        
+                break;                
 
             case 3:
                 removeElement();
