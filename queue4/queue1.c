@@ -45,7 +45,7 @@ void removeElement()
             {
                 Front=-1;
                 Rear=-1;
-            }
+            }  
             else
             {
                 Front++;
