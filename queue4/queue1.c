@@ -58,7 +58,7 @@ int main()
 {
     while (1) 
     {
-        int choice, num;
+        int choice, num; 
 
         printf("\n\n1. Add\n2. Display\n3. Remove\n4. Exit");
         printf("\nEnter your choice: ");
