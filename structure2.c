@@ -10,7 +10,7 @@ struct Student {
 };
 
 int main() {
-    struct Student s;
+    struct Student s; 
     struct Student t[30];
     
 

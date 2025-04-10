@@ -13,7 +13,7 @@ int main() {
 
     printf("Enter the Name: ");
     scanf("%s", s.studentName);  
-
+ 
     printf("Enter Math marks: ");
     scanf("%d", &s.math);
 
