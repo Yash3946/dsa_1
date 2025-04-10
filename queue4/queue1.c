@@ -64,7 +64,7 @@ int main()
         printf("\nEnter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice) 
+        switch (choice)  
         {
             case 1:
                 printf("\nEnter a number to add: ");
