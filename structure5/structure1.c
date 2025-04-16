@@ -1,3 +1,4 @@
+    //why use Structure :->structure store different dadtatype values
 #include <stdio.h>
 
 struct Student {

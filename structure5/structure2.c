@@ -42,7 +42,6 @@ int main() {
     printf("Percentage : %f\n", t[i].percentage);
 
    }
-    
    
     return 0;
 }
