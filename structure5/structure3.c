@@ -9,7 +9,7 @@ struct Student{
 };
 
 
-int main(){
+int main(){ 
 
     //SMA(static memory allocation) -> DMA(dynamic memory allocation) 
     struct Student s; 
