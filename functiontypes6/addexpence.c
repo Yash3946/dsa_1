@@ -15,7 +15,7 @@ void addExpense() {
     printf("\nEnter title, date, amount, category: ");
 
     scanf("%s %s %d %s", e[expenseIndex].title, e[expenseIndex].date, &e[expenseIndex].amount, e[expenseIndex].category);
-    
+
     expenseIndex++;
 }
 
