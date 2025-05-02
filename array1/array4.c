@@ -26,7 +26,6 @@ void display()
             {
                 //  if(arr[i] != 0)
                 printf(" %d", arr[i]);
-
             }
 }
 
@@ -83,22 +82,22 @@ int main()
 
         switch (choice)
         {
-        case 1:
-            addnumber();
-            break;
-        case 2:
-            display();
-            break;
-        case 3:
-            removenum();
-            break;
-        case 4:
-            search();
-            break;
-        case 0:
-            exit(0);
-        default:
-            break;
+            case 1:
+                addnumber();
+                break;
+            case 2:
+                display();
+                break;
+            case 3:
+                removenum();
+                break;
+            case 4:
+                search();
+                break;
+            case 0:
+                exit(0);
+            default:
+                break;
         } 
     } 
    

@@ -51,7 +51,8 @@ void display()
     }        
 }
 
-void Peek() {  
+void Peek() //it gives top elements of stack
+{  
     if (top == -1) 
     {
         printf("\nStack is empty");
