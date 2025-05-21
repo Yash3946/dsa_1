@@ -3,39 +3,67 @@
 
 struct node
 {
-    int data; 
+    int data;
     struct node *left;
     struct node *right;
 };
 
-addNode(struct node *root, int data) // 50,60
-{
-    struct node *tmp;
+struct node *addNode(struct node *root, int num)
+{ // NULL,60
+
     if (root == NULL)
     {
         root = malloc(sizeof(struct node));
-        root->data = data;
+        root->data = num;
         root->left = NULL;
         root->right = NULL;
         return root;
     }
     else
     {
-        tmp = malloc(sizeof(struct node));
-        tmp->data = data;
-        tmp->left = NULL;
-        tmp->right = NULL;
-        if (data > root->data)
+        if (num > root->data)
         {
-            root->right = tmp;
+            // right
+            root->right = addNode(root->right, num); // NULL,60
         }
         else
         {
-            root->left = tmp;
+            // left
+            root->left = addNode(root->left, num);
         }
+        return root;
     }
+}
 
-    return tmp;
+void inOrder(struct node *root)
+{
+
+    if (root != NULL)
+    {
+        inOrder(root->left);
+        printf(" %d", root->data);
+        inOrder(root->right);
+    }
+}
+
+void preOrder(struct node *root)
+{
+    if (root != NULL)
+    {
+        printf(" %d", root->data);
+        preOrder(root->left);
+        preOrder(root->right);
+    }
+}
+
+void postOrder(struct node *root)
+{
+    if (root != NULL)
+    {
+        postOrder(root->left);
+        postOrder(root->right);
+        printf(" %d", root->data);
+    }
 }
 
 int main()
@@ -43,8 +71,27 @@ int main()
 
     struct node *root = NULL;
 
-    root = addNode(root, 50);
-    addNode(root, 60);
+    root = addNode(root, 50); // NULL,50
+    root = addNode(root, 60); // Root:50,60
+    root = addNode(root, 40);
+    root = addNode(root, 30);
+    root = addNode(root, 45);
+    root = addNode(root, 55);
+    root = addNode(root, 80);
+    
+    // printf(" %d",root->data);
+    // printf(" %d",root->left->data);
+    // printf(" %d",root->right->data);
+    // printf(" %d",root->left->left->data);
+
+    printf("\nInOrder ");
+    inOrder(root);
+
+    printf("\nPreOrder ");
+    preOrder(root);
+
+    printf("\nPostOrder ");
+    postOrder(root);
 
     return 0;
 }
